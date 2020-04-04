@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+
 import com.coolweather.android.db.City;
 import com.coolweather.android.db.County;
 import com.coolweather.android.db.Province;
@@ -33,7 +34,7 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-public class ChooseFragment extends Fragment {
+public class ChooseAreaFragment extends Fragment {
     public static final int LEVEL_PROVINCE = 0;
     public static final int LEVEL_CITY = 1;
     public static final int LEVEL_COUNTY = 2;
@@ -92,7 +93,7 @@ public class ChooseFragment extends Fragment {
     }
 
     private void queryProvinces(){
-        titleText.setText("zhongguo");
+        titleText.setText("中国");
         backButton.setVisibility(View.GONE);
         provinceList = DataSupport.findAll(Province.class);
         if (provinceList.size()>0){
@@ -105,7 +106,7 @@ public class ChooseFragment extends Fragment {
             currentLevel = LEVEL_PROVINCE;
         }else {
             String address = "http://guolin.tech/api/china";
-            queryFromServer(address,"prvince");
+            queryFromServer(address,"province");
         }
     }
 
@@ -196,7 +197,7 @@ public class ChooseFragment extends Fragment {
     private void showProgressDialog(){
         if (progressDialog==null){
             progressDialog = new ProgressDialog(getActivity());
-            progressDialog.setMessage("loading");
+            progressDialog.setMessage("正在加载");
             progressDialog.setCanceledOnTouchOutside(false);
         }
     }
