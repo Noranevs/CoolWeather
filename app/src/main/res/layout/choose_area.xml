@@ -21,7 +21,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_marginLeft="10dp"
-            android:id="@+id/back_botton"
+            android:id="@+id/back_button"
             android:background="@drawable/ic_back"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
@@ -31,5 +31,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/list_view"/>
-
 </LinearLayout>
